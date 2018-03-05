@@ -1,0 +1,541 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  line-height: 1.4em;
+  vertical-align: baseline;
+  text-decoration: none;
+  outline: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-color: black;
+}
+
+/*GENERAL CLASSES--------------------------------------------------------*/
+textarea {
+  resize: none;
+  background: silver;
+  color: #545454;
+  font-size: 16px;
+}
+
+input {
+  background-color: silver;
+  color: #545454;
+}
+
+.clear {
+  clear: both;
+}
+
+.main_container {
+  border: 3px solid #545454;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image: url("../images/map.jpg");
+}
+
+#workspace {
+  width: 97vw;
+  height: 94vh;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.hidden {
+  display: none;
+}
+
+.highest_top {
+  z-index: 200 !important;
+  position: relative;
+}
+
+.top {
+  z-index: 100 !important;
+  position: relative;
+}
+
+.bottom {
+  z-index: 10 !important;
+  position: relative;
+}
+
+/*MIXINS-----------------------------------------------------------------*/
+/*MAIN_CONTAINER_UPPER_BAR-----------------------------------------------*/
+.main_bar {
+  background-color: silver;
+  background-image: url("../images/bar.gif");
+  width: 100%;
+  height: 24px;
+}
+
+.bar {
+  background-color: silver;
+  width: 100%;
+  height: 24px;
+  background-image: url("../images/bar.gif");
+}
+
+.bar_close {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_close.gif");
+  float: right;
+}
+
+.bar_window {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_window.gif");
+  float: right;
+}
+
+.bar_down {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_down.gif");
+  float: right;
+}
+
+.calendar {
+  text-align: center;
+  font-size: 13px;
+  color: #545454;
+  float: right;
+  background-color: silver;
+  width: 310px;
+  height: 18px;
+  border: 3px solid #545454;
+}
+
+.functions {
+  text-align: center;
+  font-size: 13px;
+  border: 3px solid #545454;
+  background-color: silver;
+  color: #545454;
+  float: left;
+  height: 18px;
+  width: 150px;
+}
+
+.functions:hover {
+  background-color: #545454;
+  color: silver;
+  border: 3px solid silver;
+}
+
+.functions_in {
+  list-style-type: none;
+  text-align: center;
+  font-size: 13px;
+  border: 3px solid #545454;
+  background-color: silver;
+  color: #545454;
+  height: 18px;
+  width: 200px;
+}
+
+.functions_in:hover {
+  background-color: #545454;
+  color: silver;
+  border: 3px solid silver;
+}
+
+/*WINDOWS----------------------------------------------------------------*/
+.game_welcome_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 1000px;
+  height: 750px;
+}
+
+.geos_welcome_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 455px;
+  height: 250px;
+}
+
+.geos_addUser_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 500px;
+  height: 250px;
+}
+
+.geos_info_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 240px;
+}
+
+.desktop_info_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 175px;
+}
+
+.calculator_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 275px;
+  height: 275px;
+}
+
+.calc_main {
+  color: #545454;
+  text-align: left;
+}
+
+.show_stats_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 500px;
+  height: 250px;
+}
+
+.recruit_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 500px;
+  height: 250px;
+}
+
+.text_area {
+  text-align: center;
+}
+
+.textarea_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 470px;
+}
+
+.end_turn_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 155px;
+}
+
+.turn_finished_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 260px;
+}
+
+.friendly_point_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 240px;
+}
+
+.transfer,
+.recruitInput {
+	background-color: black;
+	text-align: center;
+	width: 100px;
+	display: inline-block;
+}
+
+.fpcash,
+.fpmaxcash,
+.fpthugs,
+.fpmaxthugs,
+.fpladies,
+.fpmaxladies,
+.fpdealers,
+.fpmaxdealers,
+.epmaxthugs,
+.recruitThugs,
+.recruitLadies,
+.recruitDealers,
+.recruitInput {
+	display: inline-block;
+}
+
+.enemy_point_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 280px;
+}
+
+.save_game_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 155px;
+}
+
+.gather_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 155px;
+}
+
+.transfer_alert_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 180px;
+}
+
+.ap_alert_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 180px;
+}
+
+.attack_result_container {
+  background-color: silver;
+  color: #545454;
+  position: absolute;
+  -webkit-box-shadow: 12px 12px 0px 0px #545454;
+  -moz-box-shadow: 12px 12px 0px 0px #545454;
+  box-shadow: 12px 12px 0px 0px #545454;
+  width: 420px;
+  height: 155px;
+}
+
+/*BUTTONS-------------------------------------------------*/
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
+.calc_button {
+  color: #545454;
+  width: 35px;
+  height: 35px;
+  border: 3px solid silver;
+  margin-top: 5px;
+  -webkit-box-shadow: 5px 5px 0px 0px #545454;
+  -moz-box-shadow: 5px 5px 0px 0px #545454;
+  box-shadow: 5px 5px 0px 0px #545454;
+}
+
+.calc_button:hover {
+  background-color: #545454;
+  color: silver;
+  border: 3px solid silver;
+}
+
+.button1 {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  background-color: silver;
+  color: #545454;
+  border: 3px solid #545454;
+  -webkit-box-shadow: 8px 8px 0px 0px #545454;
+  -moz-box-shadow: 8px 8px 0px 0px #545454;
+  box-shadow: 8px 8px 0px 0px #545454;
+  display:inline-block;
+}
+
+.button1:hover {
+  background-color: #545454;
+  color: silver;
+  border: 3px solid silver;
+}
+
+/*ICONS-----------------------------------------------------*/
+.ico {
+  width: 48px;
+  height: 42px;
+  position: absolute;
+  z-index: -1;
+}
+
+.ico_e1,
+.ico_f1 {
+	left: 80px;
+	top: 100px;
+}
+.ico_e2,
+.ico_f2 {
+	left: 200px;
+	top: 240px;
+}
+.ico_e3,
+.ico_f3 {
+	left: 320px;
+	top: 90px;
+}
+.ico_e4,
+.ico_f4 {
+	left: 380px;
+	top: 280px;
+}
+.ico_e5,
+.ico_f5 {
+	left: 600px;
+	top: 160px;
+}
+.ico_e6,
+.ico_f6 {
+	left: 500px;
+	top: 400px;
+}
+.ico_e7,
+.ico_f7 {
+	left: 720px;
+	top: 420px;
+}
+.ico_e8,
+.ico_f8 {
+	left: 930px;
+	top: 450px;
+}
+.ico_e9,
+.ico_f9 {
+	left: 830px;
+	top: 230px;
+}
+.ico_e10,
+.ico_f10 {
+	left: 1140px;
+	top: 240px;
+}
+.ico_e11,
+.ico_f11 {
+	left: 720px;
+	top: 580px;
+}
+.ico_e12,
+.ico_f12 {
+	left: 960px;
+	top: 760px;
+}
+.ico_e13,
+.ico_f13 {
+	left: 80px;
+	top: 540px;
+}
+.ico_e14,
+.ico_f14 {
+	left: 200px;
+	top: 700px;
+}
+.ico_e15,
+.ico_f15 {
+	left: 1600px;
+	top: 260px;
+}
+.ico_e16,
+.ico_f16 {
+	left: 1480px;
+	top: 340px;
+}
+.ico_e17,
+.ico_f17 {
+	left: 1720px;
+	top: 420px;
+}
+.ico_e18,
+.ico_f18 {
+	left: 1480px;
+	top: 540px;
+}
+.ico_e19,
+.ico_f19 {
+	left: 1760px;
+	top: 660px;
+}
+.ico_e20,
+.ico_f20 {
+	left: 1400px;
+	top: 740px;
+}
+/*OTHER----------------------------------------------------*/
+.icons_basic_container {
+  margin-top: 40vw;
+  width: 97vw;
+  height: 5vh;
+}
+
+#Result {
+  -webkit-box-shadow: 3px 3px 0px 0px #545454;
+  -moz-box-shadow: 3px 3px 0px 0px #545454;
+  box-shadow: 3px 3px 0px 0px #545454;
+}

@@ -1,0 +1,296 @@
+* {
+margin: 0 auto;
+padding: 0;
+border: 0;
+line-height: 1.4em;
+vertical-align: baseline;
+text-decoration: none;
+outline: 0;
+font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-color: black;
+}
+
+/*GENERAL CLASSES--------------------------------------------------------*/
+
+$light-grey: rgb(192, 192, 192);
+$dark-grey: rgb(84, 84, 84);
+$dark-grey-plus: rgba(84,84,84,1);
+
+textarea {
+  resize: none;
+  background: $light-grey;
+  color: $dark-grey;
+  font-size: 16px;
+}
+
+input {
+  background-color: $light-grey;
+  color: $dark-grey;
+}
+
+.clear{
+  clear: both;
+}
+
+.main_container {
+  border: 3px solid $dark-grey;
+  width: 99vw;
+  height: 96vh;
+  background-image: url("../images/background.gif");
+  margin-top: 10px;
+}
+
+#workspace {
+  width: 97vw;
+  height: 94vh;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.hidden {
+  display: none;
+}
+
+.highest_top {
+  z-index: 200!important;
+  position: relative
+}
+
+.top {
+  z-index: 100!important;
+  position: relative
+}
+
+.bottom {
+  z-index: 10!important;
+  position: relative
+}
+
+/*MIXINS-----------------------------------------------------------------*/
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin dark_hover {
+  &:hover {
+    background-color: $dark-grey;
+    color: $light-grey;
+    border: 3px solid $light-grey;
+  }
+}
+
+@mixin box_shadow ($pixels) {
+  -webkit-box-shadow: $pixels $pixels 0px 0px $dark-grey-plus;
+  -moz-box-shadow: $pixels $pixels 0px 0px $dark-grey-plus;
+  box-shadow: $pixels $pixels 0px 0px $dark-grey-plus;
+}
+
+@mixin buttons_choose {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  background-color: $light-grey;
+  color: $dark-grey;
+  border: 3px solid $dark-grey;
+  @include box-shadow (8px);
+}
+
+@mixin window {
+  background-color: $light-grey;
+  color: $dark-grey;
+  position: absolute;
+  @include box-shadow (12px);
+}
+
+@mixin icons {
+  width: 48px;
+  height: 42px;
+  margin-top: 2.5vh;
+}
+
+/*MAIN_CONTAINER_UPPER_BAR-----------------------------------------------*/
+
+.main_bar {
+  background-color: $light-grey;
+  background-image: url("../images/bar.gif");
+  width: 100%;
+  height: 24px;
+}
+
+.bar {
+  background-color: $light-grey;
+  width: 100%;
+  height: 24px;
+  background-image: url("../images/bar.gif");
+}
+
+.bar_close {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_close.gif");
+  float: right;
+}
+
+.bar_window {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_window.gif");
+  float: right;
+}
+
+.bar_down {
+  width: 32px;
+  height: 24px;
+  background-image: url("../images/bar_down.gif");
+  float: right;
+}
+
+.calendar {
+  text-align: center;
+  font-size: 13px;
+  color: $dark-grey;
+  float: right;
+  background-color: $light-grey;
+  width: 310px;
+  height: 18px;
+  border: 3px solid $dark-grey;
+}
+
+.functions {
+  text-align: center;
+  font-size: 13px;
+  border: 3px solid $dark-grey;
+  background-color: $light-grey;
+  color: $dark-grey;
+  float: left;
+  height: 18px;
+  width: 100px;
+  @include dark_hover;
+}
+
+.functions_in {
+  list-style-type: none;
+  text-align: center;
+  font-size: 13px;
+  border: 3px solid $dark-grey;
+  background-color: $light-grey;
+  color: $dark-grey;
+  height: 18px;
+  width: 200px;
+  @include dark_hover;
+}
+
+/*WINDOWS----------------------------------------------------------------*/
+
+.geos_welcome_container {
+  @include window;
+  width: 455px;
+  height: 130px;
+}
+
+.geos_info_container {
+  @include window;
+  width: 420px;
+  height: 155px;
+}
+
+.desktop_info_container {
+  @include window;
+  width: 420px;
+  height: 175px;
+}
+
+.calculator_container {
+  @include window;
+  width: 275px;
+  height: 275px;
+}
+
+.calc_main{
+color: $dark-grey;
+text-align: left;
+}
+
+.notepad_container {
+  @include window;
+  width: 500px;
+  height: 500px;
+}
+
+.text_area {
+  text-align: center;
+}
+
+.textarea_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 470px;
+}
+
+/*BUTTONS-------------------------------------------------*/
+
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
+.calc_button {
+  color: $dark-grey;
+  width: 35px;
+  height: 35px;
+  border: 3px solid $light-grey;
+  margin-top: 5px;
+  @include box_shadow (5px);
+  @include dark_hover;
+}
+
+.button1 {
+  @include buttons_choose;
+  @include dark_hover;
+}
+
+/*ICONS-----------------------------------------------------*/
+
+.ico{
+  @include icons;
+}
+
+/*OTHER----------------------------------------------------*/
+
+.icons_basic_container {
+  margin-top: 40vw;
+  width: 97vw;
+  height: 5vh;
+}
+
+#Result {
+  @include box_shadow (3px);
+}

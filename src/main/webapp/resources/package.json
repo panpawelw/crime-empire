@@ -1,0 +1,19 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "> Do kompilacji możesz używasz narzędzia gulp, albo kompilować za pomocą Ruby.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {}
+}
