@@ -128,7 +128,7 @@ const buttonGather = $('.gather');
 function showWindowA() {
   buttonGeosInfo.on('click', function(event){
     $('.geos_info_container').removeClass('hidden');
-  })
+  });
 }
 
 function showWindowB() {
