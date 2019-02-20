@@ -17,7 +17,7 @@ import org.springframework.web.servlet.LocaleContextResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
@@ -29,43 +29,42 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages = "pl.lococompadres")
 @EnableJpaRepositories(basePackages="pl.lococompadres.repositories")
 @EnableTransactionManagement
-public class AppConfig extends WebMvcConfigurerAdapter{//implements WebMvcConfigurer{
+public class AppConfig implements WebMvcConfigurer {
 
-	@Bean
-	public ViewResolver viewResolver() {
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		viewResolver.setViewClass(JstlView.class);
-		viewResolver.setPrefix("/WEB-INF/views/");
-		viewResolver.setSuffix(".jsp");
-		return viewResolver;
-	}
-	
-	@Bean(name="localeResolver")
-	public LocaleContextResolver getLocaleContextResolver() {
-	SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-	localeResolver.setDefaultLocale(new Locale("pl","PL"));
-	return localeResolver; }
-	
-	@Bean
-	public Validator validator() {
-	return new LocalValidatorFactoryBean();
-	}
+    @Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
 
-	@Bean
-	public LocalEntityManagerFactoryBean entityManagerFactory() {
-		LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
-		emfb.setPersistenceUnitName("CrimeEmpirePersistenceUnit");
-		return emfb;
-	}
+    @Bean(name="localeResolver")
+    public LocaleContextResolver getLocaleContextResolver() {
+        SessionLocaleResolver localeResolver = new SessionLocaleResolver();
+        localeResolver.setDefaultLocale(new Locale("pl","PL"));
+        return localeResolver; }
 
-	@Bean
-	public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
-		JpaTransactionManager tm = new JpaTransactionManager(emf);
-		return tm;
-	}
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/").setCachePeriod(30);
-	}
+    @Bean
+    public Validator validator() {
+        return new LocalValidatorFactoryBean();
+    }
+
+    @Bean
+    public LocalEntityManagerFactoryBean entityManagerFactory() {
+        LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
+        emfb.setPersistenceUnitName("CrimeEmpirePersistenceUnit");
+        return emfb;
+    }
+
+    @Bean
+    public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
+        JpaTransactionManager tm = new JpaTransactionManager(emf);
+        return tm;
+    }
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/").setCachePeriod(30);
+    }
 
 }

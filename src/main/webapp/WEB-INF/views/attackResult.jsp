@@ -3,8 +3,8 @@
 <%@ page session="true" %>
 <html>
 <body>
-	<p> ${victoryOrDefeat} </p>
-	<br>
-	<p> Losses: ${losses} </p>
+<p> ${victoryOrDefeat} </p>
+<br>
+<p> Losses: ${losses} </p>
 </body>
 </html>

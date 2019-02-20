@@ -7,6 +7,6 @@ import pl.lococompadres.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 
-	User findFirstByUserName(String login);
+    User findFirstByUserName(String login);
 
 }
