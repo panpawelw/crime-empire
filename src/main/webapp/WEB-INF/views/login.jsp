@@ -11,13 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CrimeEmpire">
+    <meta name="description" content="Crime Empire">
     <meta name="keywords" content="keywords here">
     <meta name="author" content="P&A">
     <link
             href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext"
             rel="stylesheet">
-    <title>CrimeEmpire 1.0.0</title>
+    <title>Crime Empire 1.0.0</title>
     <link rel="stylesheet"
           href="<%=request.getContextPath()%>/resources/css/main.css">
     <link rel="stylesheet"
@@ -29,10 +29,10 @@
     <div class='geos_welcome_container draggable'>
         <div class="bar"></div>
         <div class="text_area">
-            <p>Welcome to CrimeEmpire</p>
+            <p>Welcome to Crime Empire</p>
             <p>PLEASE Log in or Create User</p>
             <br> ${info}
-            <form method="post" action="/CrimeEmpire/login">
+            <form method="post" action="login">
                 Login: <input type="text" name="login" placeholder="login"><br>
                 Password: <input type="password" name="password"
                                  placeholder="password"><br> <br>
@@ -40,7 +40,7 @@
                     <input type="submit" value="Log In" />
                 </button>
             </form>
-            <form action="/CrimeEmpire/addUser"
+            <form action="addUser"
                   class="button1 geos_welcome_container_button">
                 <input type="submit" value="Add User" />
             </form>

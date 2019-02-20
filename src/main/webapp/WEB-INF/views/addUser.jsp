@@ -10,13 +10,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CrimeEmpire">
+    <meta name="description" content="Crime Empire">
     <meta name="keywords" content="keywords here">
     <meta name="author" content="P&A">
     <link
             href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext"
             rel="stylesheet">
-    <title>CrimeEmpire 1.0.0</title>
+    <title>Crime Empire 1.0.0</title>
     <link rel="stylesheet"
           href="<%=request.getContextPath()%>/resources/css/main.css">
     <link rel="stylesheet"

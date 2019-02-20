@@ -10,11 +10,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CrimeEmpire">
+    <meta name="description" content="Crime Empire">
     <meta name="keywords" content="keywords here">
     <meta name="author" content="P&A">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
-    <title>CrimeEmpire 1.0.0</title>
+    <title>Crime Empire 1.0.0</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/main.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   </head>
@@ -29,7 +29,7 @@
             <br>
             You've been successfully Logged Out
             <br>
-			<form action="/CrimeEmpire/login" class="button1 geos_welcome_container_button">
+			<form action="login" class="button1 geos_welcome_container_button">
 	    		<input type="submit" value="Log in" />
 			</form>
 			</span>

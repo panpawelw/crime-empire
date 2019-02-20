@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CrimeEmpire">
+    <meta name="description" content="Crime Empire">
     <meta name="keywords" content="keywords here">
     <meta name="author" content="P&A">
     <link
@@ -19,7 +19,7 @@
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
           rel="stylesheet">
     <link href="<%=request.getContextPath()%>/resources/css/main.css" rel="stylesheet">
-    <title>CrimeEmpire 1.0.0</title>
+    <title>Crime Empire 1.0.0</title>
 </head>
 <body>
 <!-- MAIN_CONTAINER -->
@@ -31,7 +31,7 @@
             <li class="functions_in hidden geos_info"><span>info</span></li>
             <li class="functions_in hidden calculator"><span>calculator</span></li>
             <li class="functions_in hidden log out"><span><a
-                    href="/CrimeEmpire/logout">log out</a></span></li>
+                    href="logout">log out</a></span></li>
         </ul>
         <ul class="functions">
             <p>RESOURCES</p>
