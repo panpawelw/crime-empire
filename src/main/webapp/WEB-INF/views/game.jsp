@@ -101,7 +101,7 @@
                 <p>TUTORIAL</p>
                 <br>
                 <p>You are an aspiring career criminal trying to gain control
-                    over the Kutasville city.</p>
+                    over the Whateverville city.</p>
                 <p>Things you need to focus on are:</p>
                 <p>- your global pool of resources: cash to buy stuff, thugs attack enemy and protect your premises, ladies and dealers that earn you profits.</p>
                 <p>- points on the city map that you control - they represent your businesses, hideouts, street corners etc, they earn you money and you need to defend them.</p>

@@ -20,8 +20,8 @@
   </head>
   <body>
    <div class="main_container" id="workspace">
-      
-        <div class='game_welcome_container draggable'>
+        <br><br><br>
+        <div class='desktop_info_container draggable'>
           <div class="bar">
           </div>
           <div class="text_area">
