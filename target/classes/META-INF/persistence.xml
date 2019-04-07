@@ -6,17 +6,19 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="CrimeEmpirePersistenceUnit">
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/crime_empire
-			?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/crime_empire-->
+<!--			?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://aa14aoo8ylu3t2x.c7wkaetepgwa.eu-central-1.rds.amazonaws.com:3306/ebdb
+                ?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="mojSQL" />
+<!--            <property name="javax.persistence.jdbc.password" value="mojSQL" />-->
+            <property name="javax.persistence.jdbc.password" value="mojSQLaws" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.schema-generation.database.action"
-                      value="none" />
-            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="javax.persistence.schema-generation.database.action" value="create" />
+<!--            <property name="hibernate.hbm2ddl.auto" value="update" />-->
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
             <property name="hibernate.connection.useUnicode" value="true" />
             <property name="hibernate.connection.characterEncoding"
                       value="utf8" />

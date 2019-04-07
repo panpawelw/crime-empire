@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ page isELIgnored="false"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="PL">
 <head>
@@ -100,17 +100,17 @@
                 <br>
                 <p>TUTORIAL</p>
                 <br>
-                <p>You are an aspiring career criminal trying to gain control
-                    over the Whateverville city.</p>
+                <p>You are an aspiring career criminal trying to gain control over Whateverville city.</p>
                 <p>Things you need to focus on are:</p>
-                <p>- your global pool of resources: cash to buy stuff, thugs attack enemy and protect your premises, ladies and dealers that earn you profits.</p>
-                <p>- points on the city map that you control - they represent your businesses, hideouts, street corners etc, they earn you money and you need to defend them.</p>
+                <p>- your global pool of resources: cash to buy stuff, thugs attack enemy and protect your premises,
+                    ladies and dealers that earn you profits.</p>
+                <p>- points on the city map that you control - they represent your businesses, hideouts, street corners
+                    etc, they earn you money and you need to defend them.</p>
                 <p>- points controlled by enemy forces - you need to attack these.</p>
                 <br>
-                <p>Each turn you can perform several types of actions:</p>
-                <p>- transfer resources</p>
-                <p>- attack enemy</p>
-                <p>- gather resources</p>
+                <p>Each turn you can either attack the enemy or choose to gather resources (doubles your income this
+                    turn). You can also transfer resources between your points on city map and global pool of resources
+                    (once per point per turn). You can recruit/sell your underlings unlimited times per turn.</p>
                 <br>
                 <p>GOOD LUCK!</p>
                 <br>
@@ -228,17 +228,20 @@
                 </div>
                 <div>
                     <p class="fpthugs">placeholder</p>
-                    <input class="transfer" id="transferThugs"	type="number" name="tThugs" min="" max="" placeholder="0"/>
+                    <input class="transfer" id="transferThugs" type="number" name="tThugs" min="" max=""
+                           placeholder="0"/>
                     <p class="fpmaxthugs">placeholder</p>
                 </div>
                 <div>
                     <p class="fpladies">placeholder</p>
-                    <input  class="transfer" id="transferLadies" type="number" name="tLadies" min="" max="" placeholder="0"/>
+                    <input class="transfer" id="transferLadies" type="number" name="tLadies" min="" max=""
+                           placeholder="0"/>
                     <p class="fpmaxladies">placeholder</p>
                 </div>
                 <div>
                     <p class="fpdealers">placeholder</p>
-                    <input class="transfer" id="transferDealers" type="number" name="tDealers" min="" max="" placeholder="0"/>
+                    <input class="transfer" id="transferDealers" type="number" name="tDealers" min="" max=""
+                           placeholder="0"/>
                     <p class="fpmaxdealers">placeholder</p>
                 </div>
                 <br>
@@ -297,13 +300,16 @@
                 <br>
                 Thugs:
                 <p class="recruitThugs">placeholder</p>
-                <input class="recruitInput" id="recruitThugs"	type="number" name="rThugs" min="" max="" placeholder="0"/><br>
+                <input class="recruitInput" id="recruitThugs" type="number" name="rThugs" min="" max=""
+                       placeholder="0"/><br>
                 Ladies:
                 <p class="recruitLadies">placeholder</p>
-                <input class="recruitInput" id="recruitLadies"	type="number" name="rLadies" min="" max="" placeholder="0"/><br>
+                <input class="recruitInput" id="recruitLadies" type="number" name="rLadies" min="" max=""
+                       placeholder="0"/><br>
                 Dealers:
                 <p class="recruitDealers">placeholder</p>
-                <input class="recruitInput" id="recruitDealers"	type="number" name="rDealers" min="" max="" placeholder="0"/><br>
+                <input class="recruitInput" id="recruitDealers" type="number" name="rDealers" min="" max=""
+                       placeholder="0"/><br>
                 <br>
                 <button class="button1 recruit_container_button">BUY/SELL</button>
             </div>
@@ -319,45 +325,59 @@
                 <div id="keys">
                     <div id="first_row">
                         <button id="clearAll" type="reset" value="CE"
-                                class="clean calc_button">CE</button>
+                                class="clean calc_button">CE
+                        </button>
                         <button id="clear" type="reset" value="C"
-                                class="clean calc_button">C</button>
+                                class="clean calc_button">C
+                        </button>
                         <button id="add" type="button" value="+"
-                                class="operators operand calc_button">+</button>
+                                class="operators operand calc_button">+
+                        </button>
                     </div>
                     <div id="second_row">
                         <button id="seven" type="button" value="7"
-                                class="show calc_button">7</button>
+                                class="show calc_button">7
+                        </button>
                         <button id="eight" type="button" value="8"
-                                class="show calc_button">8</button>
+                                class="show calc_button">8
+                        </button>
                         <button id="nine" type="button" value="9"
-                                class="show calc_button">9</button>
+                                class="show calc_button">9
+                        </button>
                         <button id="sub" type="button" value="-"
-                                class="operators operand calc_button">-</button>
+                                class="operators operand calc_button">-
+                        </button>
                     </div>
                     <div id="third_row">
                         <button id="four" type="button" value="4"
-                                class="show calc_button">4</button>
+                                class="show calc_button">4
+                        </button>
                         <button id="five" type="button" value="5"
-                                class="show calc_button">5</button>
+                                class="show calc_button">5
+                        </button>
                         <button id="six" type="button" value="6" class="show calc_button">6</button>
                         <button id="mul" type="button" value="*"
-                                class="operators operand calc_button">*</button>
+                                class="operators operand calc_button">*
+                        </button>
                     </div>
                     <div id="fourth_row">
                         <button id="one" type="button" value="1" class="show calc_button">1</button>
                         <button id="two" type="button" value="2" class="show calc_button">2</button>
                         <button id="three" type="button" value="3"
-                                class="show calc_button">3</button>
+                                class="show calc_button">3
+                        </button>
                         <button id="divide" type="button" value="/"
-                                class="operators operand calc_button">/</button>
+                                class="operators operand calc_button">/
+                        </button>
                     </div>
                     <div id="fifth_row">
                         <button id="zero" type="button" value="0"
-                                class="show calc_button">0</button>
+                                class="show calc_button">0
+                        </button>
                         <button id="dot" type="button" value="." class="show calc_button">.</button>
                         <button id="calculate" type="button" value="="
-                                class="operand calc_button">=</button>
+                                class="operand calc_button">=
+                        </button>
                     </div>
                 </div>
             </div>
