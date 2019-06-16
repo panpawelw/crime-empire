@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
-http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
     <persistence-unit name="CrimeEmpirePersistenceUnit">
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/crime_empire
-			?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://aa14aoo8ylu3t2x.c7wkaetepgwa.eu-central-1.rds.amazonaws.com:3306/ebdb-->
-                <!--?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>-->
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="mojSQL" />
-            <!--<property name="javax.persistence.jdbc.password" value="mojSQLaws" />-->
+            <property name="javax.persistence.jdbc.user" value="root"/>
+
+            <!--            local database connection data-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/crime_empire-->
+<!--            			    ?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>-->
+<!--            <property name="javax.persistence.jdbc.password" value="mojSQL"/>-->
+
+            <!--            AWS database connection data-->
+            <property name="javax.persistence.jdbc.url"
+             value="jdbc:mysql://aa1lgkqut14apxu.c7wkaetepgwa.eu-central-1.rds.amazonaws.com:3306/ebdb
+                     ?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=EET"/>
+            <property name="javax.persistence.jdbc.password" value="mojSQLaws"/>
+
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.schema-generation.database.action" value="create" />
-<!--            <property name="hibernate.hbm2ddl.auto" value="update" />-->
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
@@ -23,6 +27,11 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
             <property name="hibernate.connection.characterEncoding"
                       value="utf8" />
             <property name="hibernate.connection.CharSet" value="utf8" />
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="300"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="3600"/>
         </properties>
     </persistence-unit>
 </persistence>
