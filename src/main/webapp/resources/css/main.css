@@ -31,9 +31,13 @@ input {
 }
 
 .main_container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     border: 3px solid #545454;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-image: url("../images/map.jpg");
 }
 
@@ -429,103 +433,103 @@ input {
 
 .ico_e1,
 .ico_f1 {
-    left: 80px;
-    top: 100px;
+    left: 4vw;
+    top: 13vh;
 }
 .ico_e2,
 .ico_f2 {
-    left: 200px;
-    top: 240px;
+    left: 10vw;
+    top: 20vh;
 }
 .ico_e3,
 .ico_f3 {
-    left: 320px;
-    top: 90px;
+    left: 23vw;
+    top: 14vh;
 }
 .ico_e4,
 .ico_f4 {
-    left: 380px;
-    top: 280px;
+    left: 24vw;
+    top: 32vh;
 }
 .ico_e5,
 .ico_f5 {
-    left: 600px;
-    top: 160px;
+    left: 40vw;
+    top: 21vh;
 }
 .ico_e6,
 .ico_f6 {
-    left: 500px;
-    top: 400px;
+    left: 31vw;
+    top: 38vh;
 }
 .ico_e7,
 .ico_f7 {
-    left: 720px;
-    top: 420px;
+    left: 49vw;
+    top: 40vh;
 }
 .ico_e8,
 .ico_f8 {
-    left: 930px;
-    top: 450px;
+    left: 62vw;
+    top: 38vh;
 }
 .ico_e9,
 .ico_f9 {
-    left: 830px;
-    top: 230px;
+    left: 59vw;
+    top: 25vh;
 }
 .ico_e10,
 .ico_f10 {
-    left: 1140px;
-    top: 240px;
+    left: 72vw;
+    top: 29vh;
 }
 .ico_e11,
 .ico_f11 {
-    left: 720px;
-    top: 580px;
+    left: 56vw;
+    top: 57vh;
 }
 .ico_e12,
 .ico_f12 {
-    left: 960px;
-    top: 760px;
+    left: 46vw;
+    top: 58vh;
 }
 .ico_e13,
 .ico_f13 {
-    left: 80px;
-    top: 540px;
+    left: 7vw;
+    top: 53vh;
 }
 .ico_e14,
 .ico_f14 {
-    left: 200px;
-    top: 700px;
+    left: 14vw;
+    top: 64vh;
 }
 .ico_e15,
 .ico_f15 {
-    left: 1600px;
-    top: 260px;
+    left: 86vw;
+    top: 37vh;
 }
 .ico_e16,
 .ico_f16 {
-    left: 1480px;
-    top: 340px;
+    left: 88vw;
+    top: 26vh;
 }
 .ico_e17,
 .ico_f17 {
-    left: 1720px;
-    top: 420px;
+    left: 78vw;
+    top: 48vh;
 }
 .ico_e18,
 .ico_f18 {
-    left: 1480px;
-    top: 540px;
+    left: 90vw;
+    top: 51vh;
 }
 .ico_e19,
 .ico_f19 {
-    left: 1760px;
-    top: 660px;
+    left: 76vw;
+    top: 63vh;
 }
 .ico_e20,
 .ico_f20 {
-    left: 1400px;
-    top: 740px;
+    left: 91vw;
+    top: 70vh;
 }
 /*OTHER----------------------------------------------------*/
 .icons_basic_container {
