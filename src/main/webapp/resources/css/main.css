@@ -30,7 +30,6 @@ input {
     padding: 3px;
 }
 
-
 .clear {
     clear: both;
 }
@@ -182,9 +181,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 500px;
     height: 250px;
 }
@@ -193,9 +192,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 240px;
 }
@@ -204,9 +203,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 175px;
 }
@@ -215,9 +214,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 275px;
     height: 275px;
 }
@@ -231,9 +230,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 500px;
     height: 250px;
 }
@@ -242,9 +241,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 500px;
     height: 250px;
 }
@@ -264,9 +263,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 155px;
 }
@@ -275,9 +274,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 260px;
 }
@@ -286,9 +285,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 240px;
 }
@@ -321,9 +320,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 280px;
 }
@@ -332,9 +331,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 155px;
 }
@@ -343,9 +342,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 155px;
 }
@@ -354,9 +353,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 180px;
 }
@@ -365,9 +364,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 180px;
 }
@@ -376,9 +375,9 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 420px;
     height: 155px;
 }

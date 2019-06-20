@@ -24,7 +24,7 @@
           href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
 <body>
-<div class="main_container" id="workspace">
+<div class="main_container " id="workspace">
 
     <div class='geos_welcome_container draggable'>
         <div class="bar"></div>

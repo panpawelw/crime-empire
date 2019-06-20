@@ -44,10 +44,6 @@ $(document).ready(function () {
         $(this).siblings().removeClass('top').addClass('bottom');
     });
 
-//	$('.ico').draggable({
-//	    grid: [ 40, 40 ], stack: 'div', containment: $(this).parent()
-//	});
-
     //DRAGGABLE POSITION
     $('.draggable').position({
         my: 'center',
@@ -301,7 +297,7 @@ $(document).ready(function () {
     });
 
     $('.point_container_button').on('click', function (event) {
-        pointNumber = 0;													//?
+        // pointNumber = 0;													//?
         $(this.closest('.draggable')).addClass('hidden');
     });
 
