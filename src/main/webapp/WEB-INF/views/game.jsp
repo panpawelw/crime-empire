@@ -51,50 +51,50 @@
     <!-- WORKSPACE & WINDOWS -->
     <div id="workspace">
 
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e1">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f1">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e2">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f2">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e3">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f3">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e4">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f4">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e5">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f5">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e6">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f6">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e7">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f7">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e8">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f8">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e9">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f9">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e10">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f10">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e11">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f11">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e12">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f12">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e13">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f13">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e14">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f14">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e15">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f15">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e16">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f16">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e17">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f17">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e18">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f18">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e19">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f19">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e20">
-        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f20">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e1" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f1" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e2" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f2" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e3" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f3" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e4" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f4" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e5" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f5" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e6" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f6" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e7" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f7" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e8" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f8" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e9" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f9" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e10" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f10" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e11" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f11" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e12" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f12" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e13" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f13" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e14" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f14" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e15" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f15" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e16" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f16" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e17" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f17" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e18" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f18" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e19" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f19" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_e.png" class="ico ico_e20" alt="point_icon">
+        <img src="<%=request.getContextPath()%>/resources/images/ico/ICO_f.png" class="ico ico_f20" alt="point_icon">
 
         <div class='game_welcome_container draggable'>
             <div class="bar"></div>
-            <div class="text_area">
+            <div class="text_area padded">
                 <p>Welcome to Crime Empire</p>
                 <p>VERSION: 1.0.0</p>
                 <br>
@@ -246,7 +246,7 @@
                 </div>
                 <br>
                 <button class="button1 transfer_container_button">TRANSFER</button>
-                <button class="button1 point_container_button">OK</button>
+                <button class="button1 point_container_button">CANCEL</button>
             </div>
         </div>
 
@@ -269,7 +269,7 @@
                 <p>available</p>
                 <br>
                 <button class="button1 attack_container_button">ATTACK</button>
-                <button class="button1 point_container_button">OK</button>
+                <button class="button1 point_container_button">CANCEL</button>
             </div>
         </div>
 

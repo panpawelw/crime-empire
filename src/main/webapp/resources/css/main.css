@@ -26,6 +26,11 @@ input {
     color: #545454;
 }
 
+.padded {
+    padding: 3px;
+}
+
+
 .clear {
     clear: both;
 }
@@ -155,20 +160,20 @@ input {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
-    width: 1000px;
-    height: 620px;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
+    width: 65vw;
+    height: 60vh;
 }
 
 .geos_welcome_container {
     background-color: silver;
     color: #545454;
     position: absolute;
-    -webkit-box-shadow: 12px 12px 0px 0px #545454;
-    -moz-box-shadow: 12px 12px 0px 0px #545454;
-    box-shadow: 12px 12px 0px 0px #545454;
+    -webkit-box-shadow: 12px 12px 0 0 #545454;
+    -moz-box-shadow: 12px 12px 0 0 #545454;
+    box-shadow: 12px 12px 0 0 #545454;
     width: 455px;
     height: 250px;
 }
@@ -393,9 +398,9 @@ input {
     height: 35px;
     border: 3px solid silver;
     margin-top: 5px;
-    -webkit-box-shadow: 5px 5px 0px 0px #545454;
-    -moz-box-shadow: 5px 5px 0px 0px #545454;
-    box-shadow: 5px 5px 0px 0px #545454;
+    -webkit-box-shadow: 5px 5px 0 0 #545454;
+    -moz-box-shadow: 5px 5px 0 0 #545454;
+    box-shadow: 5px 5px 0 0 #545454;
 }
 
 .calc_button:hover {
@@ -411,9 +416,9 @@ input {
     background-color: silver;
     color: #545454;
     border: 3px solid #545454;
-    -webkit-box-shadow: 8px 8px 0px 0px #545454;
-    -moz-box-shadow: 8px 8px 0px 0px #545454;
-    box-shadow: 8px 8px 0px 0px #545454;
+    -webkit-box-shadow: 8px 8px 0 0 #545454;
+    -moz-box-shadow: 8px 8px 0 0 #545454;
+    box-shadow: 8px 8px 0 0 #545454;
     display:inline-block;
 }
 
@@ -539,7 +544,55 @@ input {
 }
 
 #Result {
-    -webkit-box-shadow: 3px 3px 0px 0px #545454;
-    -moz-box-shadow: 3px 3px 0px 0px #545454;
-    box-shadow: 3px 3px 0px 0px #545454;
+    -webkit-box-shadow: 3px 3px 0 0 #545454;
+    -moz-box-shadow: 3px 3px 0 0 #545454;
+    box-shadow: 3px 3px 0 0 #545454;
+}
+
+/* font sizing, headings and carousel indicators for smallest screens */
+@media screen and (max-width: 400px) {
+
+    body {
+        font-size: 20%;
+    }
+}
+
+/* text sizing for small screens */
+@media screen and (min-width: 401px) and (max-width: 600px) {
+
+    body {
+        font-size: 40%;
+    }
+}
+
+/* text sizing for medium screens */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+    body {
+        font-size: 50%;
+    }
+}
+
+/* text sizing for large screens */
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+
+    body {
+        font-size: 65%;
+    }
+}
+
+/* text sizing for extra large screens */
+@media screen and (min-width: 1201px) {
+
+    body {
+        font-size: 75%;
+    }
+
+/* text sizing for huge screens */
+@media screen and (min-width: 1367px) {
+
+    body {
+        font-size: 90%;
+        }
+    }
 }
