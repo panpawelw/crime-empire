@@ -24,35 +24,33 @@
           href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
 <body>
-<div class="main_container " id="workspace">
-
-    <div class='geos_welcome_container draggable'>
-        <div class="bar"></div>
-        <div class="text_area">
-            <p>Welcome to Crime Empire</p>
-            <p>PLEASE Log in or Create User</p>
-            <br> ${info}
-            <form method="post" action="login">
-                Login: <input type="text" name="login" placeholder="login"><br>
-                Password: <input type="password" name="password"
-                                 placeholder="password"><br> <br>
-                <button class="button1 geos_welcome_container_button">
-                    <input type="submit" value="Log In" />
-                </button>
-            </form>
-            <form action="addUser"
-                  class="button1 geos_welcome_container_button">
-                <input type="submit" value="Add User" />
-            </form>
+<div class="main_container">
+    <div id="workspace">
+        <div class='geos_welcome_container draggable'>
+            <div class="bar"></div>
+            <div class="text_area">
+                <p>Welcome to Crime Empire</p>
+                <p>PLEASE Log in or Create User</p>
+                <br> ${info}
+                <form method="post" action="">
+                    Login: <input type="text" name="login" placeholder="login"><br>
+                    Password: <input type="password" name="password"
+                                     placeholder="password"><br> <br>
+                    <button class="button1 geos_welcome_container_button">
+                        <input type="submit" value="Log In" />
+                    </button>
+                </form>
+                <form action="addUser"
+                      class="button1 geos_welcome_container_button">
+                    <input type="submit" value="Add User" />
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script
-        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="<%=request.getContextPath()%>/resources/js/app.js"
-        type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/js/app.js" type="text/javascript"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ input {
 }
 
 .padded {
-    padding: 3px;
+    padding: 5px;
 }
 
 .clear {
@@ -162,8 +162,8 @@ input {
     -webkit-box-shadow: 12px 12px 0 0 #545454;
     -moz-box-shadow: 12px 12px 0 0 #545454;
     box-shadow: 12px 12px 0 0 #545454;
-    width: 65vw;
-    height: 60vh;
+    width: 75vw;
+    height: auto;
 }
 
 .geos_welcome_container {

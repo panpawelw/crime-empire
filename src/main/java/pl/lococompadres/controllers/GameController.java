@@ -70,13 +70,13 @@ public class GameController {
     @Autowired
     GamestateRepository gamestateRepository;
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String logIn(Model model) {
         model.addAttribute("user", new User());
         return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/")
     public String login(@RequestParam String login, @RequestParam String password, HttpSession session, Model model) {
 
         User user = userRepository.findFirstByUserName(login);
@@ -334,7 +334,6 @@ public class GameController {
             case 4:
                 randomEvent = "There was an explosion in one of your labs." +
                         "\n" + "You lose a bunch of dealers.";
-//			points[0].enemy=true;
                 break;
             case 5:
                 randomEvent = "A group of dealers ran away staling a fresh shipment of merchandise." +
@@ -345,7 +344,6 @@ public class GameController {
                         "\n" + "You scored yourself a nice sum of money.";
                 availableCash = availableCash + random.nextInt(100);
                 break;
-// dodać kasę
             case 7:
                 randomEvent = "One of your lads carrying cash got himself robbed while visiting a brothel." +
                         "\n" + "You've lost quite a lot...";
@@ -356,27 +354,22 @@ public class GameController {
                     availableCash = 0L;
                 }
                 break;
-// odjąć kasę
             case 8:
                 randomEvent = "There was a deadly STD epidemic among your ladies." +
                         "\n" + "You lose some of them and some money for medicines as well.";
                 break;
-// odjąć dziwki i kasę
             case 9:
                 randomEvent = "There was a clash with a strong group of enemy thugs downtown." +
                         "\n" + "You've lost some of your lads and some money to get the rest of them patched up.";
                 break;
-// odjąć karków i kasę
             case 10:
                 randomEvent = "Betrayal!!! A group of your thugs leave your ranks and join the enemy." +
                         "\n" + "I guess you can't trust anyone these days...";
                 break;
-// odjąć karków
             case 11:
                 randomEvent = "A group of enemy thugs joins your ranks." +
                         "\n" + "Better keep an eye on them, disloyalty is only difficult the first time...";
                 break;
-// odjąć karków i kasę
             case 12:
                 randomEvent = "Many of your people got themselves hooked on speed." +
                         "\n" + "You get to perform one additional action this turn.";
