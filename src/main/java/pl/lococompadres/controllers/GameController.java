@@ -173,7 +173,7 @@ public class GameController {
         user.setGamestate(gamestate);
         gamestateRepository.save(gamestate);
         userRepository.save(user);
-        return "login";
+        return "redirect:/";
     }
 
     @PostMapping("/getPoints")
