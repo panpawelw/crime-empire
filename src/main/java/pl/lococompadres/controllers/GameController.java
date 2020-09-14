@@ -24,6 +24,9 @@ import pl.lococompadres.repositories.UserRepository;
 @Controller
 public class GameController {
 
+    private final UserRepository userRepository;
+    private final GamestateRepository gamestateRepository;
+
     int actionPoints;
     Long availableCash;
     Long availableThugs;
@@ -31,44 +34,11 @@ public class GameController {
     Long availableDealers;
     Point[] points = new Point[20];
 
-    public static Point parsePoint (String string) {
-        Point point = new Point();
-        String[] variables = new String[8];
-        variables = string.split(",");
-        point.name = variables[0];
-        point.enemy = Boolean.parseBoolean(variables[1]);
-        point.pointAP = Integer.parseInt(variables[2]);
-        point.distanceToEnemy = Integer.parseInt(variables[3]);
-        point.cash = Long.parseLong(variables[4]);
-        point.thugs = (long) Integer.parseInt(variables[5]);
-        point.ladies = (long) Integer.parseInt(variables[6]);
-        point.dealers = (long) Integer.parseInt(variables[7]);
-        return point;
-    }
-
-    public int numberOfPoints (boolean mine) {
-        int numberOfMyPoints=0;
-        int numberOfEnemyPoints=0;
-        int result=0;
-        for(int i=0;i<points.length;i++) {
-            if(points[i].enemy==false) {
-                numberOfMyPoints++;
-            }else {
-                numberOfEnemyPoints++;
-            }
-        }
-        if(mine==true) {
-            result=numberOfMyPoints;
-        }else {
-            result=numberOfEnemyPoints;
-        }
-        return result;
-    }
-
     @Autowired
-    UserRepository userRepository;
-    @Autowired
-    GamestateRepository gamestateRepository;
+    public GameController(UserRepository userRepository, GamestateRepository gamestateRepository) {
+        this.userRepository = userRepository;
+        this.gamestateRepository = gamestateRepository;
+    }
 
     @GetMapping("/")
     public String logIn(Model model) {
@@ -125,7 +95,7 @@ public class GameController {
     }
 
     @PostMapping("/addUser")
-    public String userAdd(@Valid User user, BindingResult result, Model model) {
+    public String userAdd(@Valid User user, BindingResult result) {
         Gamestate gamestate = new Gamestate();
         if(result.hasErrors())
         {
@@ -176,25 +146,58 @@ public class GameController {
         return "redirect:/";
     }
 
+    public static Point parsePoint (String string) {
+        Point point = new Point();
+        String[] variables;
+        variables = string.split(",");
+        point.name = variables[0];
+        point.enemy = Boolean.parseBoolean(variables[1]);
+        point.pointAP = Integer.parseInt(variables[2]);
+        point.distanceToEnemy = Integer.parseInt(variables[3]);
+        point.cash = Long.parseLong(variables[4]);
+        point.thugs = (long) Integer.parseInt(variables[5]);
+        point.ladies = (long) Integer.parseInt(variables[6]);
+        point.dealers = (long) Integer.parseInt(variables[7]);
+        return point;
+    }
+
+    public int numberOfPoints (boolean mine) {
+        int numberOfMyPoints=0;
+        int numberOfEnemyPoints=0;
+        int result;
+        for (Point point : points) {
+            if (!point.enemy) {
+                numberOfMyPoints++;
+            } else {
+                numberOfEnemyPoints++;
+            }
+        }
+        if(mine) {
+            result=numberOfMyPoints;
+        }else {
+            result=numberOfEnemyPoints;
+        }
+        return result;
+    }
+
+
     @PostMapping("/getPoints")
     @ResponseBody
     public String getPoints() {
-        String pointNumbers = "";
-        int size=points.length;
-        for(int i=0;i<size;i++) {
-            if(points[i].enemy==true) {
-                pointNumbers+= ",1";
-            }else {
-                pointNumbers+= ",0";
+        StringBuilder pointNumbers = new StringBuilder();
+        for (Point point : points) {
+            if (point.enemy) {
+                pointNumbers.append(",1");
+            } else {
+                pointNumbers.append(",0");
             }
         }
-        System.out.println(pointNumbers);
-        return pointNumbers;
+        return pointNumbers.toString();
     }
 
     @PostMapping("/save")
     public void save(HttpSession session) {
-        User user = (User) session.getAttribute("loggedUser");								//tu musi rozpoznawać jeśli nikt nie jest zaologowany, bo wyjebie exception
+        User user = (User) session.getAttribute("loggedUser");
         Gamestate gamestate = gamestateRepository.findById(user.getGamestate().getId());
         gamestate.setActionPoints(actionPoints);
         gamestate.setCash(availableCash);
@@ -228,16 +231,14 @@ public class GameController {
     @ResponseBody
     public String Point(@RequestParam String pointId) {
         int select = (Integer.parseInt(pointId.replaceAll("[^0-9]", ""))-1);
-        String response = points[select].toString() + "," + actionPoints + "," + availableCash + "," + availableThugs+ "," + availableLadies + "," + availableDealers;
-        return response;
+        return points[select].toString() + "," + actionPoints + "," + availableCash + "," + availableThugs+ "," + availableLadies + "," + availableDealers;
     }
 
     @PostMapping("/stats")
     @ResponseBody
     public String Stats(HttpSession session) {
         User user = (User) session.getAttribute("loggedUser");
-        String response = user.getUserName() + "," + actionPoints + "," + availableCash + "," + availableThugs+ "," + availableLadies + "," + availableDealers;
-        return response;
+        return user.getUserName() + "," + actionPoints + "," + availableCash + "," + availableThugs+ "," + availableLadies + "," + availableDealers;
     }
 
     @PostMapping("/attack")
@@ -258,9 +259,8 @@ public class GameController {
             return "attackResult";
         } else {
             availableThugs = availableThugs - howMany;
-            long losses = howMany;
             model.addAttribute("victoryOrDefeat", "DEFEAT!");
-            model.addAttribute("losses", losses);
+            model.addAttribute("losses", howMany);
             return "attackResult";
         }
     }
@@ -287,8 +287,7 @@ public class GameController {
     @PostMapping("/checkAP")
     @ResponseBody
     public String checkAP() {
-        String response = Integer.toString(actionPoints);
-        return response;
+        return Integer.toString(actionPoints);
     }
 
     @PostMapping("/recruit")
@@ -301,17 +300,17 @@ public class GameController {
 
     @PostMapping("/endturn")
     public String turnFinished(@RequestParam boolean gather, Model model) {
-        String randomEvent = "";
+        String randomEvent;
         Random random = new Random();
         actionPoints++;
-        if(gather==true) {
+        if(gather) {
             actionPoints--;
         }
-        for(int i=0;i<points.length;i++) {											// Set points statistics
-            points[i].pointAP=1;
-            points[i].cash=points[i].cash+points[i].ladies+points[i].dealers;
-            if(gather==true) {
-                points[i].cash=points[i].cash+points[i].ladies+points[i].dealers;
+        for (Point point : points) {                                            // Set points statistics
+            point.pointAP = 1;
+            point.cash = point.cash + point.ladies + point.dealers;
+            if (gather) {
+                point.cash = point.cash + point.ladies + point.dealers;
             }
         }
         int probability = random.nextInt(20)+1;										// Generate random event
@@ -385,7 +384,7 @@ public class GameController {
         }
         model.addAttribute("event", randomEvent);
         int pointAttacked = random.nextInt(points.length-1);							// Enemy attack
-        if(points[pointAttacked].enemy == false) {
+        if(!points[pointAttacked].enemy) {
             String enemyAttack = points[pointAttacked].name + " has been attacked by enemy forces!";
             int enemyForces = random.nextInt(100);
             if(points[pointAttacked].thugs >= enemyForces) {
@@ -394,7 +393,7 @@ public class GameController {
                 model.addAttribute("enemyAttackResult", enemyAttackResult);
             }else {
                 points[pointAttacked].thugs = enemyForces - points[pointAttacked].thugs;
-                String enemyAttackResult = "";
+                String enemyAttackResult;
                 points[pointAttacked].enemy = true;
                 if(numberOfPoints(false)==20) {
                     enemyAttackResult = "FINAL DEFEAT!!!";								// Is defeat final?
